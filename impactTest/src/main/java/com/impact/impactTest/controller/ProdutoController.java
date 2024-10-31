@@ -31,7 +31,7 @@ public class ProdutoController {
 
     @GetMapping("/novo")
     public String novoProdutoForm(Model modelo) {
-        modelo.addAttribute("produtos", new Produto());
+        modelo.addAttribute("produto", new Produto());
         return "form";
     }
 
@@ -44,7 +44,8 @@ public class ProdutoController {
     @GetMapping("/editar/{id}")
     public String editarProdutoForm(@PathVariable Long id, Model modelo) {
         Produto produto = produtoService.buscarPorId(id);
-        modelo.addAttribute("produtos", produto);
+        modelo.addAttribute("produto", produto);
+        
         return "form";
     }
 
