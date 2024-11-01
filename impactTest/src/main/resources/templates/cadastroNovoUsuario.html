@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Novo Usuario</title>
+    <link th:href="@{/css/cadastroNovoUsuario.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="register-container">
+        <div class="tab-menu"> <a href="@{/login.html}">
+            <button onclick="window.location.href='login.html'">Login</button></a>
+            <button class="active">Cadastro</button>
+        </div>
+        <div class="register-form">
+            <h2>Cadastro</h2>
+            <form action="#">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Confirme sua senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="login.html">Entrar</a></p>
+        </div>
+    </div>
+</body>
+</html>
