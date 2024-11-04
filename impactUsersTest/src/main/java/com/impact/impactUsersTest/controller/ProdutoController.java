@@ -39,7 +39,7 @@ public class ProdutoController {
 	        produtoService.salvar(produto);
 	        return "redirect:/produtos";
 	    }
-/*
+
 	    @GetMapping("/editar/{id}")
 	    public String editarProdutoForm(@PathVariable Long id, Model modelo) {
 	        Produto produto = produtoService.buscarPorId(id);
@@ -53,7 +53,7 @@ public class ProdutoController {
 	        produto.setId(id);
 	        produtoService.salvar(produto);
 	        return "redirect:/produtos";
-	    }*/
+	    }
 
 	    @GetMapping("/excluir/{id}")
 	    public String excluir(@PathVariable Long id) {
