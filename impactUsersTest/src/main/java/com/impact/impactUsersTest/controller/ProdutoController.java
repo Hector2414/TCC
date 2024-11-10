@@ -18,8 +18,12 @@ import com.impact.impactUsersTest.service.ProdutoService;
 @RequestMapping("/produtos")
 public class ProdutoController {
 
+	
+	
 	 @Autowired
 	    private ProdutoService produtoService;
+	 
+	    
 
 	    @GetMapping
 	    public String listar(Model modelo) {

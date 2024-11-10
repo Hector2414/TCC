@@ -29,6 +29,19 @@
     <div id="container ">
     
     <h2>Home</h2>
+    
+    
+     <div class="produtos">
+        <ul>
+            <li th:each="produto : ${produtos}">
+                <h2 th:text="${produto.nome}">Nome do Produto</h2>
+                <p th:text="${produto.quantidade}">Quantidade</p>
+                <p th:text="${produto.preco}">Preço</p> <!--  -->
+                <img th:src="@{produto.imagem}" alt="Imagem do Produto">
+            </li>
+        </ul>
+    </div>
+    
     <!--
     <form id="LogoutForm" th:action="@{/logout}" method="post" style="display:none">
          
