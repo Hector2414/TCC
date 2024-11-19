@@ -8,6 +8,7 @@
     <div>
         <h1 th:text="${produto.id} == null ? 'Cadastrar Produto' : 'Editar Produto'"></h1>
         <form th:action="@{/produtos}" method="post" th:object="${produto}">
+        	<input type="hidden" th:field="*{id}" />  <!---->
             <label>Nome:</label>
             <input type="text" th:field="*{nome}" required />
             <br/>
