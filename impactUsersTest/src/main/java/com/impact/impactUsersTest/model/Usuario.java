@@ -5,6 +5,8 @@ import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -30,6 +32,9 @@ public class Usuario {
 	                inverseJoinColumns = @JoinColumn(name = "papel_id"))
 	private Set<Papel> papeis = new HashSet<Papel>();
 	
+	@Enumerated(EnumType.STRING)
+	private Role role;
+	
 	
 	public Usuario() {
 		
@@ -41,6 +46,12 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
+	public Role getRole() {
+		return role;
+	}
+	public void setRole(Role role) {
+		this.role = role;
+	}
 	
 	
 	public Set<Papel> getPapeis() {
