@@ -44,7 +44,7 @@ private final DetalhesUsuarioService detalhesUsuarioService;
 		http.authorizeHttpRequests((authorize) -> 
 		        authorize
 		            .requestMatchers("/login","/registrar","/lista","/form", "/h2-console/**").permitAll()
-		          .requestMatchers("/produtos/novo","/produtos/gerenciar").hasRole("ADMIN")
+		         // .requestMatchers("/produtos/novo","/produtos/gerenciar").hasRole("ADMIN")
 		            .requestMatchers("css/**").permitAll()
 		  
 				    .anyRequest().authenticated()
