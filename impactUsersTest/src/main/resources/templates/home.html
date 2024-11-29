@@ -26,21 +26,22 @@
     
     </nav>
     
-    <div id="container ">
+    <div id="container "> <!-- div container -->
     
     <h2>Home</h2>
     
-    
-     <div class="produtos">
+    <!-- Produtos cadastrados são exibidos na tela principal -->
+     <div class="produtos"><!--div produtos  -->
         <ul>
             <li th:each="produto : ${produtos}">
                 <h2 th:text="${produto.nome}">Nome do Produto</h2>
+                <img th:src="${produto.imagem}" alt="Imagem do Produto">
                 <p th:text="${produto.quantidade}">Quantidade</p>
                 <p th:text="${produto.preco}">Preço</p> <!--  -->
-                <img th:src="@{produto.imagem}" alt="Imagem do Produto">
+                
             </li>
         </ul>
-    </div>
+    </div> <!--div produtos  -->
     
     <!--
     <form id="LogoutForm" th:action="@{/logout}" method="post" style="display:none">
@@ -51,7 +52,7 @@
       -->
     <!--  
     <p>Ainda não tem conta? <a th:href="@{/registrar}"> Registre-se aqui</a> </p>-->
-    </div>
+    </div><!-- div container -->
     
   </body>
 </html>
