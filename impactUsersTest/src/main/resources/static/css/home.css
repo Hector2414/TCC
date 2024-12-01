@@ -120,3 +120,34 @@ p {
 .button:hover {
     background-color: #0074cc;
 }
+
+/* Estilo para o botão de adicionar ao carrinho */
+.adicionar-carrinho {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #28a745; /* Verde vibrante */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.adicionar-carrinho:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); /* Elevação ao passar o mouse */
+}
+
+.adicionar-carrinho:active {
+    background-color: #1e7e34; /* Verde ainda mais escuro ao clicar */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(0); /* Remove a elevação ao clicar */
+}
+
