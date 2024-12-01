@@ -35,7 +35,7 @@ public class CarrinhoController {
 	        return "redirect:/home";
 	    }
 
-	    @GetMapping("/carrinho")
+	    @GetMapping
 	    public String exibirCarrinho(Model modelo) {
 	        modelo.addAttribute("itens", carrinho.getItens());
 	        modelo.addAttribute("total", carrinho.calcularTotal());

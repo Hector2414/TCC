@@ -43,7 +43,7 @@ private final DetalhesUsuarioService detalhesUsuarioService;
 		
 		http.authorizeHttpRequests((authorize) -> 
 		        authorize
-		            .requestMatchers("/login","/registrar","/lista","/form", "/h2-console/**").permitAll()
+		            .requestMatchers("/login","/registrar","/lista","/form","/carrinho", "/h2-console/**").permitAll()
 		     
 		            .requestMatchers("css/**").permitAll()
 		  
