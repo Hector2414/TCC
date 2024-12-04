@@ -121,33 +121,41 @@ p {
     background-color: #0074cc;
 }
 
-/* Estilo para o botão de adicionar ao carrinho */
+/* Estilo básico do botão */
 .adicionar-carrinho {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 1rem;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #00b09b, #96c93d); /* Gradiente */
+    color: white;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    background-color: #28a745; /* Verde vibrante */
-    color: #fff;
+    text-decoration: none;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: all 0.3s ease;
-    text-align: center;
-    text-decoration: none;
+    cursor: pointer;
 }
 
+/* Efeito ao passar o mouse */
 .adicionar-carrinho:hover {
-    background-color: #218838; /* Verde mais escuro no hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px); /* Elevação ao passar o mouse */
+    background: linear-gradient(135deg, #96c93d, #00b09b); /* Inverte o gradiente */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Leve aumento */
 }
 
+/* Efeito de clique */
 .adicionar-carrinho:active {
-    background-color: #1e7e34; /* Verde ainda mais escuro ao clicar */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-    transform: translateY(0); /* Remove a elevação ao clicar */
+    transform: scale(0.95); /* Reduz o tamanho levemente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    .adicionar-carrinho {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
